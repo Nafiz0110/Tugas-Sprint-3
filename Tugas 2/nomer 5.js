@@ -7,9 +7,9 @@ var randomNumbers = [
   80, 68,
 ];
 let hasil = randomNumbers
-  .filter((nafiz) => nafiz >= 65)
-  .map((nafiz) => nafiz / 2)
-  .filter((nafiz) => nafiz < 40)
-  .map((nafiz) => randomNumbers.length / nafiz)
-  .reduce((nafiz, mobile) => nafiz / 2 + mobile);
+  .filter((a) => a >= 65)
+  .map((a) => a / 2)
+  .filter((a) => a < 40)
+  .map((a) => randomNumbers.length / a)
+  .reduce((acc,curr) => acc / 2 + curr)
 console.log(hasil);
