@@ -1,20 +1,41 @@
-var statsEmail = false;
-var statsPassword = false;
+let username = "nafiz9197";
+let password = "112233";
 
-function login(email, password) {
-  if (email == "nafiz@gmail.com") {
-    if (password == "nafiz") {
-      document.write("halaman home");
-      statsEmail = true;
-      statsPassword = true;
-    } else {
-      document.write("password yang anda masukkan salah");
+function Login(username, password) {
+  if (username == "nafiz9197" && password == "112233") {
+    function goHome() {
+      console.log("Halaman Home");
     }
+
+    return goHome;
   } else {
-    document.write("email yang anda masukkan salah");
+    if (username == "nafiz9197") {
+      if (password == "112233") {
+        function goHome() {
+          console.log("Halaman Home");
+        }
+
+        return goHome;
+      } else {
+        function backLogin() {
+          console.log("Login Gagal");
+        }
+
+        return backLogin;
+      }
+    } else {
+      function backLogin() {
+        console.log("Login Gagal");
+      }
+
+      return backLogin;
+    }
   }
 }
 
-do {
-  login(prompt("masukkan email anda"), prompt("msukkan password anda"));
-} while (!statsEmail && !statsPassword);z
+let userName = prompt("Masukan Username");
+let passWord = prompt("Masukan Password");
+
+const cobaLogin = Login(userName, passWord);
+
+cobaLogin();
